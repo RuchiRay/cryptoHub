@@ -1,15 +1,32 @@
-import { Route,Switch,Link } from 'react-router-dom';
-import { Sidebar } from './components';
-import './styles/utilities.css'
-import "@fontsource/nunito"
+import { Routes, Route } from "react-router-dom";
+import {
+  Sidebar,
+  Exchanges,
+  Home,
+  Cryptocurrencies,
+  News,
+  SingleCrypto,
+} from "./components";
+import "./styles/utilities.css";
+import "@fontsource/nunito";
 
 function App() {
   return (
     <div className="App">
-      <div className='sidebar'>
-      <Sidebar/>
+      <div className="sidebar">
+        <Sidebar />
       </div>
-     
+      <div className="main">
+        <div className="routes">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/exchanges" element={<Exchanges />} />
+            <Route path="/cryptocurrencies" element={<Cryptocurrencies />} />
+            <Route path="/news" element={<News />} />
+            <Route path="/crypto/:coinId" element={<SingleCrypto />} />
+          </Routes>
+        </div>
+      </div>
     </div>
   );
 }
