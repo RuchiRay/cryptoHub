@@ -1,11 +1,16 @@
-import React from 'react'
-
+import React from "react";
+import '../styles/home.css'
+import { useGetCryptosQuery } from '../services/cryptoApi';
 const Home = () => {
-    return (
-        <div>
-            home
-        </div>
-    )
-}
+const {data,isFetching} = useGetCryptosQuery();
+console.log(data);
 
-export default Home
+  return <div className="main">
+      <h1 className="heading">Global Crypto Stats</h1>
+      <div className="home-stats">
+          
+      </div>
+  </div>;
+};
+
+export default Home;

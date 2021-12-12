@@ -8,7 +8,6 @@ import {
   SingleCrypto,
 } from "./components";
 import "./styles/utilities.css";
-import "@fontsource/nunito";
 
 function App() {
   return (
