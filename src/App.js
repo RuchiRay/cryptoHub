@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import {
   Sidebar,
   Exchanges,
-  Home,
+  HomePage,
   Cryptocurrencies,
   News,
   SingleCrypto,
@@ -18,7 +18,7 @@ function App() {
       <div className="main">
         <div className="routes">
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<HomePage />} />
             <Route path="/exchanges" element={<Exchanges />} />
             <Route path="/cryptocurrencies" element={<Cryptocurrencies />} />
             <Route path="/news" element={<News />} />

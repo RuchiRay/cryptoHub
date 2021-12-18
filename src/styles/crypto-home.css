@@ -1,0 +1,75 @@
+.crypto-wrapper {
+  flex-wrap: wrap;
+  display: flex;
+}
+.crypto-wrapper .crypto {
+  flex-direction: column;
+  background-color: var(--dark-200);
+  margin-top: 35px;
+  margin-right: 35px;
+  padding: 20px;
+  width: 330px;
+}
+.crypto:hover {
+  box-shadow: 5px 5px 23px #031628, -5px -5px 23px #05223c;
+}
+.crypto-icon {
+  width: 60px;
+  height: 60px;
+  margin: 25px 0px;
+}
+.crypto-heading {
+  font-size: 1.3rem;
+  color: var(--primary-text);
+}
+.crypto-info {
+  width: 100%;
+  justify-content: space-around;
+  display: flex;
+}
+.crypto-info div {
+  flex-direction: column;
+}
+.crypto-info div p {
+  color: var(--tertiary-text);
+}
+.crypto-info div h1 {
+  color: var(--secondary-text);
+  font-weight: 100;
+  font-size: 1.4rem;
+}
+.daily-change {
+  display: flex;
+  align-items: center;
+}
+.search-crypto {
+  margin-top: 30px;
+}
+.search-crypto input {
+  width: 300px;
+  height: 40px;
+  text-align: center;
+  background-color: var(--secondary-text);
+  border: none;
+  font-size: 1.3rem;
+}
+.prev-next {
+  display: flex;
+  margin-left: 37px;
+  margin-top: 10px;
+}
+.prev,
+.next {
+  font-size: 2rem;
+  padding: 5px 10px;
+  margin-right: 20px;
+  background-color: var(--dark-300);
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+  border: none;
+  color: var(--secondary-text);
+}
+.prev:hover,
+.next:hover {
+  background-color: var(--dark-200);
+}
