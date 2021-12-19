@@ -10,7 +10,7 @@ import {
 import millify from "millify";
 import "../styles/crypto-home.css";
 const Cryptocurrencies = ({ less }) => {
-  const count = less ? "10" : "30";
+  const count = less ? "10" : "100";
   const [offset, setOffset] = useState(0);
   const { data, isFetching } = useGetCryptosQuery({
     limit: count,
@@ -28,10 +28,10 @@ const Cryptocurrencies = ({ less }) => {
   console.log(coinList);
 
   const handleNext = () => {
-    setOffset((prev) => prev + 30);
+    setOffset((prev) => prev + 100);
   };
   const handlePrev = () => {
-    setOffset((prev) => prev - 30);
+    setOffset((prev) => prev - 100);
   };
 
   if (isFetching) return <h1>Loading.......</h1>;
@@ -71,7 +71,7 @@ const Cryptocurrencies = ({ less }) => {
         {coinList?.map((coin) => {
           const { change, iconUrl, marketCap, name, price, uuid, rank } = coin;
           return (
-            <div key={uuid} className="crypto flex">
+            <Link key={uuid} to={`/cryptos/${uuid}`} className="crypto flex">
               <div className="crypto-heading flex">
                 <div className="crypto-rank">{rank}.</div>
                 <p className="crypto-name"> {name}</p>
@@ -92,14 +92,14 @@ const Cryptocurrencies = ({ less }) => {
                   <p>Daily Change</p>
                   <h1
                     className="daily-change"
-                    style={{ color: change < 0 ? "#16c79a" : "red" }}
+                    style={{ color: change < 0 ? "red" : "#16c79a" }}
                   >
                     {change}
                     {change < 0 ? <BsArrowDown /> : <BsArrowUp />}
                   </h1>
                 </div>
               </div>
-            </div>
+            </Link>
           );
         })}
       </div>

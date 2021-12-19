@@ -9,6 +9,8 @@
   margin-right: 35px;
   padding: 20px;
   width: 330px;
+  cursor: pointer;
+  text-decoration: none;
 }
 .crypto:hover {
   box-shadow: 5px 5px 23px #031628, -5px -5px 23px #05223c;
